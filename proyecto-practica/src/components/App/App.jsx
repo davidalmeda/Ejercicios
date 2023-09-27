@@ -3,6 +3,7 @@ import './index.css'
 import Login from '../Login/Login'
 import Account from '../Account/Account'
 import Imagen from '../Imagen/Imagen'
+import EjercicioJsx from '../EjercicioJsx/EjercicioJsx'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -13,6 +14,7 @@ function App() {
         <Login />
         <Account />
       </div>
+      <EjercicioJsx />
     </div>
   )
 }

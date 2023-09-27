@@ -1,0 +1,10 @@
+.one-card {
+    width: 25%;
+    .img-card {
+        width: 300px;
+        height: 300px; 
+    }
+    .description {
+        align-self: center;
+    }
+}

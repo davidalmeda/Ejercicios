@@ -1,0 +1,12 @@
+.header {
+    margin-left: 5%;
+    margin-right: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    .logo {
+        width: 150px;
+    }
+}

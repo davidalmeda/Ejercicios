@@ -1,8 +1,8 @@
 function Imagen(props) {
 
     return (
-      <div className={props.className}>
-        <img src={props.name} alt={props.title}/>
+      <div className="image">
+        <img className ={props.className} src={props.name} alt={props.title}/>
       </div>
     )
   }

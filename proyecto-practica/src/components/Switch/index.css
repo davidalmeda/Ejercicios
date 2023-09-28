@@ -1,0 +1,8 @@
+.switch {
+    &.active {
+        color: aqua;
+    }
+    &.deactive {
+        color: blueviolet;
+    }
+} 

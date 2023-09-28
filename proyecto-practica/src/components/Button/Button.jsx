@@ -1,9 +1,9 @@
 import './index.css'
 
-function Button(props) {
+function Button({className, text, children, onClick}) {
   return (
     <div>
-    <button className={props.className}>{props.text}</button>
+    <button onClick={onClick} className={className}>{children ? children : text}</button>
     </div>
   )
 }

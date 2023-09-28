@@ -17,8 +17,12 @@ function App() {
     //    <Account />
     //  </div>
     //</div>
-
-    <Button className='acount' text = "Iniciar sesión" type="secondary" disabled onClick= {(() =>click())} />
+      <>
+    <Button className='acount' text = "Iniciar sesión" type="secondary" disabled onClick= {(() =>click())} >
+      <p>Funcionan los hijos</p>
+    </Button>
+    <Button className='acount' text = "Iniciar sesión" onClick= {(() =>click())} />
+    </>
   )
 }
 

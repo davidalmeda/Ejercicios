@@ -18,8 +18,8 @@ function App() {
     //  </div>
     //</div>
       <>
-    <Button className='acount' text = "Iniciar sesión" type="secondary" disabled onClick= {(() =>click())} >
-      <p>Funcionan los hijos</p>
+    <Button className='acount'  type="secondary" disabled onClick= {(() =>click())} >
+      <p>Funciona</p>
     </Button>
     <Button className='acount' text = "Iniciar sesión" onClick= {(() =>click())} />
     </>

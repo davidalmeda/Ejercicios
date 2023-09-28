@@ -1,9 +1,6 @@
 import { useState } from 'react'
 import './index.css'
-import Login from '../Login/Login'
-import Account from '../Account/Account'
 import Imagen from '../Imagen/Imagen'
-import EjercicioJsx from '../EjercicioJsx/EjercicioJsx'
 import Header from '../Header/Header'
 import Card from '../Card/Card'
 function App() {

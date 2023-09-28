@@ -1,8 +1,5 @@
 import { useState } from 'react'
 import './index.css'
-import Login from '../Login/Login'
-import Account from '../Account/Account'
-import Imagen from '../Imagen/Imagen'
 import ArrayList from '../ArrayList/ArrayList'
 function App() {
   const [count, setCount] = useState(0)

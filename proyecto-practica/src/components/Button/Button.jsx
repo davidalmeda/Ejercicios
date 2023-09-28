@@ -1,9 +1,9 @@
 import './index.css'
 
-function Button(props) {
+function Button({className, text, type = "primary", disabled=false, onClick}) {
   return (
     <div>
-    <button className={props.className}>{props.text}</button>
+    <button onClick={onClick} className={type=="primary" ? "coso1" : "coso2"} disabled={disabled} >{text}</button>
     </div>
   )
 }

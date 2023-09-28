@@ -10,7 +10,7 @@ function Login() {
       <Button className='register' text = "Registrarse con Google" />
       <Button className='register' text = "Registrarse con Apple" />
       <p className='divider line one-line'>O</p>
-      <Button className='register acount' text = "Crear cuenta" />
+      <Button className='register account' text = "Crear cuenta" />
       <p>Al regístarse, aceptas los 
         <a className="link" href='https://mybabel.sharepoint.com/'> Términos de servicio </a>       
         y la

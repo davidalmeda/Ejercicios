@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import './index.css'
 import Listas from './Listas/Listas'
+import Objetos from './Objetos/Objetos'
+import ListaDinamica from './ListaDinamica/ListaDinamica'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -12,7 +14,10 @@ function App() {
     //    <Account />
     //  </div>
     //</div>
-    <Listas />
+    <div>
+      <ListaDinamica />
+    </div>
+
   )
 }
 

@@ -1,9 +1,12 @@
 import './index.css'
 
-function Button({className, text, children, onClick}) {
+function Button({onClick, text, children, visible}) {
+  if (!visible) {
+    return
+  }
   return (
     <div>
-     <button onClick={onClick} className={className}>{children ? children : text}</button>
+     <button onClick={onClick} className="button">{children ? children : text}</button>
     </div>
   )
 }

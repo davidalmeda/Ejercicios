@@ -1,0 +1,15 @@
+.button-div {
+    display: flex;
+    justify-content: space-around;
+    .invisible {
+        display: none;
+    }
+    .visible {
+        position: fixed; 
+        bottom: 40px;
+        font-size: 3rem;
+        z-index: 1;
+        cursor: pointer;
+        background-color: blue;
+    }
+}

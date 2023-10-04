@@ -1,0 +1,16 @@
+.position-div {
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .scroll-result {
+        position: fixed; 
+        background-color: aqua;
+        width: 100px;
+        display: flex;
+        justify-content: space-around;
+    }
+}

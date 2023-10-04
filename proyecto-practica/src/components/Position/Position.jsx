@@ -1,17 +1,18 @@
 import './index.css'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import Button from '../Button/Button';
 function Position() {
   const [scrollTop, setScrollTop] = useState(0);
-
+  const elementRef = useRef(null)
   const handleScroll = event => {
     setScrollTop(event.currentTarget.scrollTop);
   };
   window.addEventListener('scroll', handleScroll);
   return (
     
-    <div className='position-div' onScroll={handleScroll}>
-        <Button text="Scroll arriba" visible={scrollTop > 300 ? true : false}/>
+    <div className='position-div' onScroll={handleScroll} ref={elementRef}>
+        <Button text="Scroll arriba" visible={scrollTop > 300 ? true : false} parent={elementRef}/>
+
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit, itaque asperiores quas amet at magnam quod harum dolor alias, voluptatem consectetur mollitia consequatur distinctio porro perspiciatis nulla nisi. Saepe, tempora?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni dicta qui amet sit, quas unde perspiciatis eveniet, iste quos consectetur, rem id impedit eligendi laudantium asperiores. Laborum natus totam magnam!
         In fugit debitis a nesciunt odio, mollitia praesentium amet possimus consequuntur sunt molestiae earum labore impedit officia corporis consequatur ipsa laudantium natus perferendis! Quibusdam, sapiente ipsa debitis aliquam voluptas officia?
         Aspernatur, obcaecati quia non, fuga labore blanditiis sapiente doloremque temporibus officia eligendi a? Optio eius dolores provident, reiciendis hic voluptatibus quis libero nobis maiores laboriosam, aliquid tempore, voluptatum cupiditate saepe!

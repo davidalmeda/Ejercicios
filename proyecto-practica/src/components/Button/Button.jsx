@@ -1,10 +1,12 @@
 import './index.css'
 import { useState } from 'react'
 import { Link, animateScroll as scroll } from "react-scroll";
-function Button({text, visible, children}) {
+function Button({text, visible, children, parent}) {
   var elmnt = document.getElementById("position");
   function scrollTop(){
-    document.querySelector(".position-div").scrollTo({top:0, behavior:'smooth'})
+    if(parent.current){
+      parent.current.scrollTo({top:0, behavior:'smooth'})
+    }
   };
 
   return (

@@ -1,18 +1,17 @@
-import { useState } from 'react'
 import './index.css'
-import Login from '../Login/Login'
-import Account from '../Account/Account'
-import Imagen from '../Imagen/Imagen'
+import ListaProductos from '../ListaProductos/ListaProductos'
+const productos = [
+  {imagen:"https://img2.rtve.es/i/?w=1600&i=1657019155649.jpg", nombre:"Poster goku niño", descripcion:"Poster 300X200 de goku con la nube kinton", precio:11, stock:2},
+  {imagen:"https://phantom-marca-mx.unidadeditorial.es/c708d3f32aaab50aa7790eae59c8fd2d/resize/828/f/jpg/mx/assets/multimedia/imagenes/2023/05/21/16846238697919.jpg", nombre:"Poster Goku vs Vegetta", descripcion:"Poster de Goku ssj blue vs vegetta ssj blue", precio:31, stock:2},
+  {imagen:"https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2020/02/dragon-ball-significan-nombres-personajes-1858451.jpg?tf=3840x", nombre:"Poster Goku y amigos", descripcion:"Poster de goku con su familia, amigos y resto de los guerreros Z", precio:5, stock:2},
+  {imagen:"https://i.blogs.es/885670/screenshot_3619/450_1000.webp", nombre:"Poster Yayirobe dragon ball", descripcion:"Poster de Yayirobe, el gran guerrero capaz de cortar la cola de Vegeta Ozaru", precio:34, stock:0},
+  {imagen:"https://erikstore.com/blog/wp-content/uploads/2023/05/Tranformaciones-son-goku-dragon-ball-1080x675.jpg", nombre:"Alfombrilla raton Goku", descripcion:"Alfombrilla raton Goku transformaciones", precio:14, stock:2},
+]
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className='all'>
-      <Imagen className="mid" name= "https://www.lanacion.com.ar/resizer/v2/elon-musk-cambio-el-logo-de-WHTIWEV47VHEHDV4QYC6PRXVBE.jpg?auth=29e4042f48af310deb7e46ab9afc31d8ef98589c3c1c1c29d6be7ce335477df1&width=420&height=280&quality=70&smart=false" title="Imagen X"/>
-      <div className='mid'>
-        <Login />
-        <Account />
-      </div>
+      <ListaProductos productos={productos}/>
     </div>
   )
 }

@@ -1,11 +1,10 @@
-function Imagen(props) {
+function Imagen({className, link, title}) {
 
     return (
-      <div className={props.className}>
-        <img src={props.name} alt={props.title}/>
+      <div>
+        <img className={className} src={link} alt={title}/>
       </div>
     )
   }
   
   export default Imagen
-  

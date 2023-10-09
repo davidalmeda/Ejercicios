@@ -11,13 +11,17 @@ function CartProvider({ children }){
 
   const addToCart = element => {
     const carrito = cart.map(ele => ele.product)
-    console.log(carrito)
+    if(element.stock==0) {
+      alert("No hay stock del prooducto")
+      return
+    }
     if (carrito.includes(element)) {
-      console.log("HOLAAAAAAAAAAAAAAAAAAAAA")
-      const copy = [...carrito]
-      console.log(copy)
-      //No funciona por que no solo tiene el elemento sino tmb la cantidad(Hacerlo con carrito en vez de cart)
-      copy[copy.indexOf(element)] = {product: element, cantidad: cart.find(ele => ele.product == element).cantidad +1}
+      const copy = [...cart]
+      if(element.stock<cart.find(ele => ele.product == element).cantidad +1) {
+        alert("No hay stock suficiente del prooducto")
+        return
+      }
+      copy[carrito.indexOf(element)] = {product: element, cantidad: cart.find(ele => ele.product == element).cantidad +1}
       setCart(copy)
     } else {
       setCart([ ...cart, {product: element, cantidad: 1} ]);

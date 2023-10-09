@@ -1,0 +1,26 @@
+.rutas {
+
+
+    display: flex;
+    justify-content: space-between;
+    .links {
+        width: 49%;
+        .lista {
+            display: flex;
+            list-style-type: none;
+            flex-direction: column;
+            .link {
+                text-decoration:none;
+                color: black;
+                &.active {
+                    color: pink;
+                    text-decoration: underline;
+                }
+            }
+        }
+
+    }
+    .content {
+        width: 49%;
+    }
+}

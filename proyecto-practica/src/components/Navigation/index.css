@@ -1,0 +1,7 @@
+.lista {
+    display: flex;
+    list-style-type: none;
+    .element {
+        margin-right: 15%;
+    }
+}

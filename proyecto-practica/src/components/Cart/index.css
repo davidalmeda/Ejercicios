@@ -1,0 +1,34 @@
+.cart {
+    
+    margin: 0;
+    padding: 0;
+    right: -10px;
+    width: 300px;
+    list-style: none none;
+    background: #cf8989;
+    border: 1px solid #b48888;
+    margin-top: 10px;
+    position: fixed;
+    overflow-y: scroll;
+    max-height: 200px;
+    box-shadow: 0 3px 3px rgba(0,0,0,.15);
+    .cart-list {
+        .cart-ele {
+            border-top: 1px solid #d40d0d;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .image {
+                width: 150px;
+                height: 100px;
+            }.cantidad {
+                display: flex;
+                justify-content: center;
+                background: #ffffff;
+                border: 1px solid #000000;
+            }
+        }
+    }
+}

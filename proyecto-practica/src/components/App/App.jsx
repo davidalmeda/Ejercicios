@@ -12,9 +12,7 @@ function App() {
 
   return (
     <div className='all'>
-      <div className='cart'>
-        <Cart />
-      </div>
+      <Cart />
       <ListaProductos productos={productos}/>
     </div>
   )

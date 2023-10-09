@@ -33,7 +33,6 @@ function CartProvider({ children }){
   const addOneMoreToCart = (element)  => {
     const carrito = cart.map(ele => ele.product)
     const copy = [...cart]
-    console.log(element)
     if(element.stock<cart.find(ele => ele.product == element).cantidad +1) {
       alert("No hay stock suficiente del prooducto")
       return

@@ -1,6 +1,11 @@
 import './index.css'
+import { useState, useContext } from 'react'
 import ListaProductos from '../ListaProductos/ListaProductos'
 import Cart from '../Cart/Cart'
+import Button from '../Button/Button'
+import useToggle from './useToggle'
+import { CartContext } from '../Context/context';
+import shoppingCartLogo from '../../assets/shopping-cart.svg'
 const productos = [
   {imagen:"https://img2.rtve.es/i/?w=1600&i=1657019155649.jpg", nombre:"Poster goku niño", descripcion:"Poster 300X200 de goku con la nube kinton", precio:11, stock:2},
   {imagen:"https://phantom-marca-mx.unidadeditorial.es/c708d3f32aaab50aa7790eae59c8fd2d/resize/828/f/jpg/mx/assets/multimedia/imagenes/2023/05/21/16846238697919.jpg", nombre:"Poster Goku vs Vegetta", descripcion:"Poster de Goku ssj blue vs vegetta ssj blue", precio:31, stock:2},
@@ -9,10 +14,12 @@ const productos = [
   {imagen:"https://erikstore.com/blog/wp-content/uploads/2023/05/Tranformaciones-son-goku-dragon-ball-1080x675.jpg", nombre:"Alfombrilla raton Goku", descripcion:"Alfombrilla raton Goku transformaciones", precio:14, stock:2},
 ]
 function App() {
-
+  const { cart } = useContext(CartContext);
+  const { state, toggle } = useToggle()
   return (
     <div className='all'>
-      <Cart />
+      {!state && <Button className={"cart-button"} onClick={() => toggle()}><img src={shoppingCartLogo} alt="Logo cart"/>  <p className='quantity'>({cart.length})</p> </Button>}
+      {state && <Cart hideCart={toggle} />}
       <ListaProductos productos={productos}/>
     </div>
   )

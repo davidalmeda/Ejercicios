@@ -4,10 +4,11 @@ import { CartContext } from '../Context/context';
 import Imagen from '../Imagen/Imagen';
 import Product from '../ListaProductos/Product/Product';
 import Button from '../Button/Button';
-function Cart() {
+function Cart({hideCart}) {
     const { cart, addToCart, addOneMoreToCart, removeOneFromCart } = useContext(CartContext);
     return (
-        <div className='cart'>   
+        <div className='cart'> 
+        <Button onClick={() => hideCart()}>X</Button>  
             <ul className='cart-list'>
                 {cart.map(ele => 
                     <li className='cart-ele' key={`${ele.product.nombre}${ele.product.precio}`}>

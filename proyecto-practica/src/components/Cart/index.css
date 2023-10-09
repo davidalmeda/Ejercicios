@@ -1,5 +1,5 @@
 .cart {
-    
+
     margin: 0;
     padding: 0;
     right: -10px;
@@ -10,8 +10,9 @@
     margin-top: 10px;
     position: fixed;
     overflow-y: scroll;
-    max-height: 200px;
+    max-height: 300px;
     box-shadow: 0 3px 3px rgba(0,0,0,.15);
+
     .cart-list {
         .cart-ele {
             border-top: 1px solid #d40d0d;

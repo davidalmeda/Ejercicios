@@ -15,7 +15,6 @@ function Product({product}) {
             <p>Precio: {precio}€</p>
             <p>{stock == 0 ? "Producto no disponible por el momento" : ` Unidades disponibles: ${stock}`}</p>
             <Button className="button" text="Add to cart" onClick={() => addToCart(product)}/>
-            {console.log(cart)}
         </div>
     )
 }

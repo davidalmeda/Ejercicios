@@ -13,9 +13,11 @@ function CartProvider({ children }){
     const carrito = cart.map(ele => ele.product)
     console.log(carrito)
     if (carrito.includes(element)) {
-      const copy = [...cart]
+      console.log("HOLAAAAAAAAAAAAAAAAAAAAA")
+      const copy = [...carrito]
+      console.log(copy)
       //No funciona por que no solo tiene el elemento sino tmb la cantidad(Hacerlo con carrito en vez de cart)
-      copy[copy.indexOf(element)] = {product: element, cantidad: copy.findIndex(element).cantidad}
+      copy[copy.indexOf(element)] = {product: element, cantidad: cart.find(ele => ele.product == element).cantidad +1}
       setCart(copy)
     } else {
       setCart([ ...cart, {product: element, cantidad: 1} ]);
